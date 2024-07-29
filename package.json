@@ -1,0 +1,26 @@
+{
+  "name": "desert_camp_backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViolentUJJWAL/desert_camp_backend.git"
+  },
+  "author": "Ujjwal kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViolentUJJWAL/desert_camp_backend/issues"
+  },
+  "homepage": "https://github.com/ViolentUJJWAL/desert_camp_backend#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "colors": "^1.4.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1"
+  }
+}
