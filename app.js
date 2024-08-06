@@ -1,6 +1,9 @@
 const colors = require('colors')
 const express = require("express")
+const cookieParser = require("cookie-parser")
 require("dotenv").config()
+const authRoutes = require("./routes/authRoutes")
+const userRoutes = require("./routes/userRoutes")
 
 
 const appServer = async () => {
@@ -14,10 +17,12 @@ const appServer = async () => {
         // middelware
         // app.use(cors())
         app.use(express.json())
+        app.use(cookieParser())
         // app.use(morgan("dev"))
 
         // routes
-        // app.use("/api/v1/auth", authrouter)
+        app.use("/api/v1/auth", authRoutes)
+        app.use("/api/v1/user", userRoutes)
 
         // server listen
         app.listen(PORT, () => {

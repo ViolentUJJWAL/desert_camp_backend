@@ -1,17 +1,19 @@
 const express = require("express");
-const { SignupUser, loginUser} = require("../controller/userController");
+const { getProfile, updateProfile} = require("../controller/userController");
 
-const authrouter = express.Router()
+const userrouter = express.Router()
+const checktoken = require("../middleware/checkToken")
 
+
+userrouter.use(checktoken)
 
 // forgetPassword - forget {POST}
 
 
 // Create User - signup {POST}
-authrouter.post("/signup", SignupUser);
-
-// Login User - login {POST}
-authrouter.post("/login", loginUser);
+userrouter.get("/profile", getProfile);
+userrouter.put("/update", updateProfile)
 
 
-module.exports = authrouter
+
+module.exports = userrouter
